@@ -82,6 +82,12 @@ io.on("connection", (socket) => {
   });
 });
 
+// Refresh event every 10 seconds
+setInterval(() => {
+  io.emit("refresh", { message: "Server is refreshing every 10 seconds" });
+  console.log("Server sent refresh event");
+}, 10000); // 10 seconds
+
 // Start the server
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
