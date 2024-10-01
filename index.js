@@ -11,11 +11,11 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: [
-      "https://primaverse-assist.netlify.app", // Adjust your frontend URLs
+      "https://primaverse-assist.netlify.app",
       "https://assist.primaverse.tech",
       "http://localhost:5173",
     ],
-    methods: ["GET", "POST", "OPTIONS"],
+    methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   },
